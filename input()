@@ -1,6 +1,7 @@
-c = input()
-a = []
-while c != '!':
-    c = int(b)
-    a.append(c)
-    c = input()
+def inputt(c):
+    a = []
+    while c != '!':
+        c = int(b)
+        a.append(c)
+        c = input()
+        
