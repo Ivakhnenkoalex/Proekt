@@ -1,0 +1,17 @@
+c = input()
+a = []
+b = []
+while c != '!':
+    c = int(c)
+    a.append(c)
+    c = input()
+for j in range(0, len(a)):
+    z = 0
+    for i in range(0, len(a)):
+        if z < a[i]:
+            z = a[i]
+    if z > 0:
+        b.append(z)
+        for n in range(0, len(a)):
+            if a[n] == z:
+                a[n] = a[n] * 0
