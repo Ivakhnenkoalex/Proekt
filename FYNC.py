@@ -35,3 +35,28 @@ def ft_rev_list(mass):
         mass[i] = a[i]
         i = i + 1
     return mass
+
+
+def ft_sorted(a):
+    b = []
+    for j in range(0, ft_len(a)):
+        z = 0
+        for i in range(0, ft_len(a)):
+            if z < a[i]:
+                z = a[i]
+        if z > 0:
+            b.append(z)
+            for n in range(0, ft_len(a)):
+                if a[n] == z:
+                    a[n] = a[n] * 0
+    return (ft_rev_list(b))
+
+
+b = input()
+a = []
+while b != '!':
+    b = int(b)
+    a.append(b)
+    b = input()
+kq = ft_sorted(a)
+print(kq)
