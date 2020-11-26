@@ -1,0 +1,12 @@
+def inputt_check(c):
+    a = []
+    l = []
+    while c != '!':
+        c = int(c)
+        a.append(c)
+        c = input()
+    s = input()
+    while s != '*':
+        s = str(s)
+        l.append(s)
+        s = input()
