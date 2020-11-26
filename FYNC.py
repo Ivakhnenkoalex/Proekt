@@ -1,4 +1,4 @@
-def s(m):
+def ft_s(m):
     m[0], m[1] = m[1], m[0]
     return m
 
@@ -11,6 +11,7 @@ def shiftr(lst, steps):
     else:
         for i in range(steps):
             lst.insert(0, lst.pop())
+    return lst
 
 
 def ft_len(str):
@@ -52,11 +53,36 @@ def ft_sorted(a):
     return (ft_rev_list(b))
 
 
-b = input()
+z = input()
 a = []
-while b != '!':
-    b = int(b)
-    a.append(b)
-    b = input()
-kq = ft_sorted(a)
-print(kq)
+b = []
+while z != '!':
+    z = int(z)
+    a.append(z)
+    z = input()
+kon = ft_sorted(a)
+min = 1001
+while a != kon:
+    i = 0
+    while i < ft_len(a):
+        if a[i] < min:
+            min = a[i]
+        i = i + 1
+    if a[0] > a[1]:
+       a = ft_s(a)
+       print(sa)
+    if a[0] == min:
+        b.append(a[0])
+        b = shiftr(b,1)
+        print(pb)
+    else:
+        a = shiftr(a,1)
+        print(rra)
+    if b == kon:
+        i = 0
+        while i < ft_len(a):
+            a.append(b[0])
+            a = shiftr(a,1)
+            print(pa)
+            a = shiftr(a,-i)
+            print(ra)
