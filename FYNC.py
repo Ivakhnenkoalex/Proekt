@@ -65,7 +65,7 @@ min = 1001
 while a != kon:
     i = 0
     while i < ft_len(a):
-        if a[i] < min:
+        if a[i] < min: ## Тут что-то не так
             min = a[i]
         i = i + 1
     if a[0] > a[1]:
