@@ -1,17 +1,28 @@
-c = input()
-a = []
-b = []
-while c != '!':
-    c = int(c)
-    a.append(c)
-    c = input()
-for j in range(0, len(a)):
-    z = 0
-    for i in range(0, len(a)):
-        if z < a[i]:
-            z = a[i]
-    if z > 0:
-        b.append(z)
-        for n in range(0, len(a)):
-            if a[n] == z:
-                a[n] = a[n] * 0
+def ft_len(l):
+    f = 0
+    for i in l:
+        f += 1
+    return f
+
+
+def bigg(c):
+    a = []
+    b = []
+    f = []
+    while c != '!':
+        c = int(c)
+        a.append(c)
+        c = input()
+    for j in range(0, ft_len(a)):
+        z = 0
+        for i in range(0, ft_len(a)):
+            if z < a[i]:
+                z = a[i]
+        if z > 0:
+            b.append(z)
+            for n in range(0, ft_len(a)):
+                if a[n] == z:
+                    a[n] = a[n] * 0
+    for m in range(1, ft_len(b) + 1):
+        f.append(b[-m])
+    print(f)
