@@ -1,0 +1,125 @@
+def ft_len(l):
+    f = 0
+    for i in l:
+        f += 1
+    return f
+def shiftr(lst, steps):
+    if steps < 0:
+        steps = abs(steps)
+        for i in range(steps):
+            lst.append(lst.pop(0))
+    else:
+        for i in range(steps):
+            lst.insert(0, lst.pop())
+    return lst
+
+
+def bigg(c):
+    a = []
+    b = []
+    ot_k = []
+    shag = []
+    p = []
+    q = []
+    while c != '!':
+        c = int(c)
+        a.append(c)
+        c = input()
+    p = a
+    s = input()
+    while s != '*':
+        s = str(s)
+        shag.append(s)
+        s = input()
+    for j in range(0, ft_len(a)):
+        z = 0
+        for i in range(0, ft_len(a)):
+            if z < a[i]:
+                z = a[i]
+        if z > 0:
+            b.append(z)
+            for n in range(0, ft_len(a)):
+                if a[n] == z:
+                    a[n] = a[n] * 0
+    for m in range(1, ft_len(b) + 1):
+        ot_k.append(b[-m])
+    for i in range(ft_len(shag)):
+        if shag[i] == sa:
+            p[0], p[1] = p[1], p[0]
+        if shag[i] == sb:
+            q[0], q[1] = q[1], q[0]
+        if shag[i] == ss:
+            p[0], p[1] = p[1], p[0]
+            q[0], q[1] = q[1], q[0]
+        if shag[i] == pa:
+            p.append(q[0])
+            p = shiftr(p, 1)
+        if shag[i] == pb:
+            q.append(p[0])
+            q = shiftr(q, 1)
+        if shag[i] == ra:
+            if 1 < 0:
+                1 = abs(1)
+                for i in range(1):
+                    p.append(p.pop(0))
+            else:
+                for i in range(1):
+                    p.insert(0, p.pop())
+        if shag[i] == rb:
+            if 1 < 0:
+                1 = abs(1)
+                for i in range(1):
+                    q.append(q.pop(0))
+            else:
+                for i in range(1):
+                    q.insert(0, q.pop())
+        if shag[i] == rr:
+            if 1 < 0:
+                1 = abs(1)
+                for i in range(1):
+                    p.append(p.pop(0))
+            else:
+                for i in range(1):
+                    p.insert(0, p.pop())
+            if 1 < 0:
+                1 = abs(1)
+                for i in range(1):
+                    q.append(q.pop(0))
+            else:
+                for i in range(1):
+                    q.insert(0, q.pop())
+        if shag[i] == rra:
+            steps = -1
+            if steps < 0:
+                steps = abs(steps)
+                for i in range(steps):
+                    p.append(p.pop(0))
+            else:
+                for i in range(steps):
+                    p.insert(0, p.pop())
+        if shag[i] == rrb:
+            steps = -1
+            if steps < 0:
+                steps = abs(steps)
+                for i in range(steps):
+                    q.append(q.pop(0))
+            else:
+                for i in range(steps):
+                    q.insert(0, q.pop())
+        if shag[i] == rrr:
+            steps = -1
+            if steps < 0:
+                steps = abs(steps)
+                for i in range(steps):
+                    p.append(p.pop(0))
+            else:
+                for i in range(steps):
+                    p.insert(0, p.pop())
+            steps = -1
+            if steps < 0:
+                steps = abs(steps)
+                for i in range(steps):
+                    q.append(q.pop(0))
+            else:
+                for i in range(steps):
+                    q.insert(0, q.pop())
