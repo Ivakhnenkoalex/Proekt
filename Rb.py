@@ -1,4 +1,4 @@
-def Rb(b, 1):
+def Rb(b):
     if 1 < 0:
         1 = abs(1)
         for i in range(1):
