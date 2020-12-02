@@ -3,7 +3,7 @@ def ft_s(m):
     return m
 
 
-def RRb(m, st=1):
+def RRb(m, st=-1):
     a = []
     d = ft_len(m)
     if st == 1:
