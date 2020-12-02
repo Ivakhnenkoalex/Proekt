@@ -1,9 +1,7 @@
-def Rb(b):
-    if 1 < 0:
-        1 = abs(1)
-        for i in range(1):
-            b.append(b.pop(0))
+def Rb(lst,steps=1):
+    steps = 1
+    if steps < 0:
+        lst = lst[1:]+lst[:1]
     else:
-        for i in range(1):
-            b.insert(0, b.pop())
-    return b
+        lst = lst[-1:]+lst[:-1]
+    return lst
