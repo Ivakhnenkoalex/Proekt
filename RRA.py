@@ -3,9 +3,9 @@ def ft_s(m):
     return m
 
 
-def RRa(a, steps):
+def RRa(m, st=1):
     a = []
-    d = len(m)
+    d = ft_len(m)
     if st == 1:
         a.append(m[d-1])
         i = 0
