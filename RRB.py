@@ -1,10 +1,7 @@
 def RRb(lst, steps):
     steps = -1
     if steps < 0:
-        steps = abs(steps)
-        for i in range(steps):
-            lst.append(lst.pop(0))
+        lst = lst[1:]+lst[:1]
     else:
-        for i in range(steps):
-            lst.insert(0, lst.pop())
+        lst = lst[-1:]+lst[:-1]
     return lst
