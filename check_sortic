@@ -123,34 +123,36 @@ def bigg(c):
     for m in range(1, ft_len(b) + 1):
         ot_k.append(b[-m])
     for i in range(ft_len(shag)):
-        if shag[i] == sa:
+        if shag[i] == "sa":
             p[0], p[1] = p[1], p[0]
-        if shag[i] == sb:
+        if shag[i] == "sb":
             q[0], q[1] = q[1], q[0]
-        if shag[i] == ss:
+        if shag[i] == "ss":
             p[0], p[1] = p[1], p[0]
             q[0], q[1] = q[1], q[0]
-        if shag[i] == pa:
+        if shag[i] == "pa":
             p.append(q[0])
             p = shiftr(p, 1)
-        if shag[i] == pb:
+        if shag[i] == "pb":
             q.append(p[0])
             q = shiftr(q, 1)
-        if shag[i] == ra:
+        if shag[i] == "ra":
             p = Ra(p)
-        if shag[i] == rb:
+        if shag[i] == "rb":
             q = Rb(q)
-        if shag[i] == rr:
+        if shag[i] == "rr":
             p = Ra(p)
             q = Rb(q)
-        if shag[i] == rra:
+        if shag[i] == "rra":
             p = RRa(p)
-        if shag[i] == rrb:
+        if shag[i] == "rrb":
             q = RRb(q)
-        if shag[i] == rrr:
+        if shag[i] == "rrr":
             p = RRa(p)
             q = RRb(q)
     if p == ot_k:
         print("OK")
     if p != ot_k:
         print("KO")
+        
+print(bigg(2))
