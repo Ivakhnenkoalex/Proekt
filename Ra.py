@@ -1,6 +1,23 @@
-def Ra(lst,steps=1): ## lst - это или a или b,steps  = 1 если ra или rb,steps = -1 если rra или rrb
-    if steps < 0:
-        lst = lst[1:]+lst[:1]
-    else:
-        lst = lst[-1:]+lst[:-1]
-    return lst
+def ft_s(m):
+    m[0], m[1] = m[1], m[0]
+    return m
+
+
+def Ra(m, st=1):
+    a = []
+    d = ft_len(m)
+    if st == 1:
+        a.append(m[d-1])
+        i = 0
+        while i < ft_len(m)-1:
+            a.append(m[i])
+            i = i + 1
+        return a
+    if st == -1:
+        i = 1
+        while i < ft_len(m):
+            a.append(m[i])
+            i = i + 1
+        a.append(m[0])
+        return a
+
