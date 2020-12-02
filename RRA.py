@@ -1,10 +1,7 @@
 def RRa(a, steps):
     steps = -1
     if steps < 0:
-        steps = abs(steps)
-        for i in range(steps):
-            a.append(a.pop(0))
+        lst = lst[1:]+lst[:1]
     else:
-        for i in range(steps):
-            a.insert(0, a.pop())
-    return a
+        lst = lst[-1:]+lst[:-1]
+    return lst
