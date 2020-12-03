@@ -69,13 +69,14 @@ while z != '!':
     a.append(z)
     b.append(z)
     z = input()
-kon = ft_sorted(a)
-a = []
-for i in range(ft_len(b)):
-    a.append(b[i])
-b = []
-min = 1001
-rewkon = ft_rev_list(kon)
+if ft_len(a) > 0:
+    kon = ft_sorted(a)
+    a = []
+    for i in range(ft_len(b)):
+        a.append(b[i])
+    b = []
+    min = 1001
+    rewkon = ft_rev_list(kon)
 while ft_len(a) != 0:
     i = 0
     while i < ft_len(a):
