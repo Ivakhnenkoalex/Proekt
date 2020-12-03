@@ -83,12 +83,13 @@ while s != '*':
     l.append(s)
     s = input()
 d = ft_len(l)
-kon = ft_sorted(a)
-a = []
-for i in range(ft_len(b)):
-    a.append(b[i])
-b = []
-i = 0
+if ft_len(a) > 0:
+    kon = ft_sorted(a)
+    a = []
+    for i in range(ft_len(b)):
+        a.append(b[i])
+    b = []
+    i = 0
 while d != 0:
     if srav(l[i],'sa') == 1 and ft_len(a) >= 2:
         a[0],a[1] = a[1],a[0]
@@ -136,8 +137,8 @@ while d != 0:
     i = i + 1 
     d = d - 1
 
-
-if a == kon:
-    print('Ok')
-if a != kon:
-    print('Ko')
+if ft_len(a) > 0:
+    if a == kon:
+        print('Ok')
+    if a != kon:
+        print('Ko')
